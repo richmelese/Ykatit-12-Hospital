@@ -421,8 +421,12 @@ a:focus {
   color: #222;
   font-family: "Kanit", sans-serif;
   text-transform: capitalize;
-  font-size: 18px;
+  font-size: 20px;
   transition: all 0.25s ease;
+}
+
+#navbarmain .nav-link:hover {
+  border-bottom: solid 2px green;
 }
 
 .dropdown-toggle::after {
@@ -469,9 +473,9 @@ a:focus {
 }
 
 .header-top-bar {
-  background: #4c952d;
+  background: #214213;
   font-size: 17px;
-  padding: 0px 0px;
+  padding: 8px 0px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   color: #fff;
 }
@@ -1591,11 +1595,21 @@ a:focus {
   right: -37rem;
   bottom: 0;
   left: -106px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
 }
 span.text-uppercase.text-sm.letter-spacing {
   color: #e3e2e2;
 }
 p.mb-4.pr-5 {
-  color: #e3e2e2;
+  color: #1c1f1b;
+  font-weight: 600;
+}
+
+#mtitle {
+  color: #223a66;
+  font-size: x-large;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 32px;
 }
