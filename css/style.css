@@ -1613,3 +1613,11 @@ p.mb-4.pr-5 {
   letter-spacing: -1px;
   line-height: 32px;
 }
+
+#mtitle {
+  color: #223a66;
+  font-size: x-large;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
