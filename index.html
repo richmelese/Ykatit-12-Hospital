@@ -27,8 +27,47 @@
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <!-- Add these lines to include Swiper.js -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
+  <style>
+    .swiper-slide::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(
+        0,
+        0,
+        0,
+        0.5
+      ); /* Adjust the alpha value for the desired opacity */
+    }
 
+    .swiper-container {
+      width: 100%;
+      height: 500px; /* Set your desired height */
+    }
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      color: white; /* Adjust text color for better contrast */
+    }
+    .swiper-button-prev {
+      color: #4c952d;
+    }
+    .swiper-button-next {
+      color: #4c952d;
+    }
+  </style>
   <body id="top">
     <div class="main-search">
       <header>
@@ -186,37 +225,114 @@
         </nav>
       </header>
 
-      <!-- Slider Start -->
-      <section class="banner">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-12 col-xl-7">
-              <div class="block">
-                <div class="divider mb-3"></div>
-                <span class="text-uppercase text-sm letter-spacing"
-                  >Total Health care solutions</span
-                >
-                <h1 class="mb-3 mt-3">Your most trusted health partner</h1>
-
-                <p class="mb-4 pr-5">
-                  We believe in the power of working together in advancing
-                  patient well-being. Yekatit-12 is focused on living its
-                  mission — to improve health every day. In addition to
-                  providing world-class care!
-                </p>
-                <div class="btn-container">
-                  <a
-                    href="appoinment.html"
-                    target="_blank"
-                    class="btn btn-main-2 btn-icon btn-round-full"
-                    >More About Us <i class="icofont-simple-right ml-2"></i
-                  ></a>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div
+            class="swiper-slide"
+            style="background-image: url('./images/Home/banner-1.jpg')"
+          >
+            <div class="container">
+              <div class="col-lg-6 col-md-12 col-xl-7">
+                <div class="block">
+                  <!-- Your content for the first slide -->
+                  <div class="divider mb-3"></div>
+                  <span class="text-uppercase text-sm letter-spacing"
+                    >Total Health care solutions</span
+                  >
+                  <h1 id="Header" class="mb-3 mt-3">
+                    Your most trusted health partner
+                  </h1>
+                  <p id="sub-content" class="mb-4 pr-5">
+                    We believe in the power of working together in advancing
+                    patient well-being. Yekatit-12 is focused on living its
+                    mission — to improve health every day. In addition to
+                    providing world-class care!
+                  </p>
+                  <div class="btn-container">
+                    <a
+                      href="appoinment.html"
+                      target="_blank"
+                      class="btn btn-main-2 btn-icon btn-round-full"
+                      >More About Us <i class="icofont-simple-right ml-2"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Slide 2 -->
+          <div
+            class="swiper-slide"
+            style="background-image: url('./images/Home/banner-2.jpg')"
+          >
+            <div class="container">
+              <div class="col-lg-6 col-md-12 col-xl-7">
+                <div class="block">
+                  <!-- Your content for the second slide -->
+                  <div class="divider mb-3"></div>
+                  <span class="text-uppercase text-sm letter-spacing"
+                    >Another Health care solution</span
+                  >
+                  <h1 id="Header" class="mb-3 mt-3">
+                    Your next trusted health partner
+                  </h1>
+                  <p id="sub-content" class="mb-4 pr-5">
+                    We believe in the power of working together in advancing
+                    patient well-being. Yekatit-12 is focused on living its
+                    mission — to improve health every day. In addition to
+                    providing world-class care!
+                  </p>
+                  <div class="btn-container">
+                    <a
+                      href="appoinment.html"
+                      target="_blank"
+                      class="btn btn-main-2 btn-icon btn-round-full"
+                      >More About Us <i class="icofont-simple-right ml-2"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more slides as needed -->
         </div>
-      </section>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <!-- Add Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".swiper-container", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          loop: true,
+          autoplay: {
+            delay: 5000,
+          },
+        });
+      </script>
+
+      <!-- Add Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".swiper-container", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          loop: true,
+        });
+      </script>
+
       <section class="features">
         <div class="container">
           <div class="row">
@@ -279,9 +395,9 @@
           <div class="row align-items-center">
             <div class="col-lg-4 col-sm-6">
               <div class="about-img">
-                <img src="images/about/img-1.jpg" alt="" class="img-fluid" />
+                <img src="./images/Home/about-1.jpg" alt="" class="img-fluid" />
                 <img
-                  src="images/about/img-2.jpg"
+                  src="./images/Home/about02.jpg"
                   alt=""
                   class="img-fluid mt-4"
                 />
@@ -289,7 +405,11 @@
             </div>
             <div class="col-lg-4 col-sm-6">
               <div class="about-img mt-4 mt-lg-0">
-                <img src="images/about/img-3.jpg" alt="" class="img-fluid" />
+                <img
+                  src="./images//Home/about-3.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
               </div>
             </div>
             <div class="col-lg-4">
@@ -679,10 +799,10 @@
                   />
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-                  mollitia. Voluptatum dolorum facere illum, quod quae nemo.
-                  Animi minima, consequatur exercitationem sequi iste sapiente
-                  voluptatum eligendi, facere commodi iusto corporis!.
+                  We believe in the power of working together in advancing
+                  patient well-being. Yekatit-12 is focused on living its
+                  mission — to improve health every day. In addition to
+                  providing world-class care!
                 </p>
 
                 <ul class="list-inline footer-socials mt-4">

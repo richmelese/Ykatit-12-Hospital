@@ -642,8 +642,9 @@ a:focus {
 }
 
 .feature-item {
+  z-index: 10;
   flex-basis: 33.33%;
-  margin: 0px 10px;
+  margin: 33px 10px;
   padding: 40px 30px;
   background-color: #fff;
   border-radius: 15px 15px 15px 15px;
