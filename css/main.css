@@ -68,22 +68,25 @@
   }
 }
 @media (max-width: 780px) {
-#logo-img {
-  width: 5rem;
+  #logo-img {
+    width: 5rem;
+  }
+  #mtitle {
+    color: #223a66;
+    font-size: 20px;
+    margin-left: -74px;
+    line-height: 26px;
+  }
 }
-#mtitle {
-  color: #223a66;
-  font-size: 20px;
-  margin-left: -74px;
-  line-height: 26px;
-}
- 
-}
-.divider{
+.divider {
   margin-top: 2rem;
 }
 
-}
-.navbar-toggler{
+.navbar-toggler {
   font-size: 1.5rem;
+}
+
+/* Optional: Add styling for the sticky header when it's not at the top */
+.header-top-bar.sticky {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
 }

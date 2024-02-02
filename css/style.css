@@ -427,6 +427,7 @@ a:focus {
 
 #navbarmain .nav-link:hover {
   color: #4c952d;
+
   /* border-bottom: solid 2px green; */
 }
 
@@ -470,7 +471,8 @@ a:focus {
 }
 
 .dropdown .dropdown-item:hover {
-  color: #4c952d;
+  color: #fff;
+  background-color: #4c952d;
 }
 /* new add animations  */
 /* Add animation for the navbar when toggled */
@@ -490,7 +492,9 @@ a:focus {
 
 /* Apply styles when the hamburger icon is clicked */
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-  transform: rotate(180deg); /* You can adjust the rotation or other properties */
+  transform: rotate(
+    180deg
+  ); /* You can adjust the rotation or other properties */
 }
 
 /* Define the animation keyframes */
@@ -526,15 +530,30 @@ a:focus {
   color: #222; /* Change color on click */
   transform: scale(0.9); /* You can adjust the scale or other properties */
 }
-
-
 .header-top-bar {
+  background-color: #214213;
+  padding: 10px 0;
+  transition: background-color 0.3s ease; /* Optional: add a smooth transition effect */
+}
+
+.header-top-bar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional box shadow for a subtle effect */
+}
+
+/* .header-top-bar {
   background: #214213;
   font-size: 17px;
   padding: 8px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   color: #fff;
-}
+} */
 
 .top-bar-info li a {
   color: #fff;
