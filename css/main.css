@@ -25,6 +25,7 @@
 
 .swiper-container {
   width: 100%;
+  overflow: hidden;
   height: 500px; /* Set your desired height */
 }
 .swiper-slide {
@@ -48,14 +49,16 @@
   .swiper-button-prev:after,
   .swiper-rtl .swiper-button-next:after {
     color: #4c952d;
-    margin-top: 14rem;
+    margin-top: 50rem;
     margin-left: -22px;
+    display: none;
   }
   .swiper-button-next:after,
   .swiper-rtl .swiper-button-prev:after {
     color: #4c952d;
-    margin-top: 14rem;
+    margin-top: 50rem;
     margin-left: -22px;
+    display: none;
   }
   #sub-content {
     margin-left: 19px;
@@ -63,4 +66,24 @@
   .feature-item.mb-5.mb-lg-0 {
     margin-top: 6rem;
   }
+}
+@media (max-width: 780px) {
+#logo-img {
+  width: 5rem;
+}
+#mtitle {
+  color: #223a66;
+  font-size: 20px;
+  margin-left: -74px;
+  line-height: 26px;
+}
+ 
+}
+.divider{
+  margin-top: 2rem;
+}
+
+}
+.navbar-toggler{
+  font-size: 1.5rem;
 }

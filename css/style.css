@@ -472,6 +472,61 @@ a:focus {
 .dropdown .dropdown-item:hover {
   color: #4c952d;
 }
+/* new add animations  */
+/* Add animation for the navbar when toggled */
+#navbarmain.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+/* Apply styles when the navbar is open */
+#navbarmain.navbar-collapse.show {
+  animation: slideIn 0.3s ease;
+}
+
+/* Add animation for the hamburger icon */
+.navbar-toggler-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Apply styles when the hamburger icon is clicked */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  transform: rotate(180deg); /* You can adjust the rotation or other properties */
+}
+
+/* Define the animation keyframes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* .icofont-navigation-menu:before{
+  color: red;
+} */
+/* Initial styles for the hamburger icon */
+.icofont-navigation-menu:before {
+  color: #214213;
+  font-size: 35px;
+  border: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add animation for the hamburger icon on hover */
+.icofont-navigation-menu:hover:before {
+  color: #4c952d; /* Change color on hover */
+  transform: scale(1.1); /* You can adjust the scale or other properties */
+}
+
+/* Add animation for the hamburger icon on click */
+.icofont-navigation-menu:active:before {
+  color: #222; /* Change color on click */
+  transform: scale(0.9); /* You can adjust the scale or other properties */
+}
+
 
 .header-top-bar {
   background: #214213;
