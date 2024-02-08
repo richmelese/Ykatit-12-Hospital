@@ -26,7 +26,7 @@
 .swiper-container {
   width: 100%;
   overflow: hidden;
-  height: 500px; /* Set your desired height */
+  height: 580px; /* Set your desired height */
 }
 .swiper-slide {
   display: flex;
@@ -96,4 +96,8 @@
 }
 .about {
   margin-top: -3rem;
+}
+#contact-btn {
+  background-color: #4c952d;
+  margin-left: 1rem;
 }

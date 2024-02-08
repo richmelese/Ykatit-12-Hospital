@@ -411,7 +411,7 @@ a:focus {
   }
 }
 
-#navbarmain {
+/* #navbarmain {
   padding: 20px 0px;
 }
 
@@ -423,23 +423,23 @@ a:focus {
   text-transform: capitalize;
   font-size: 20px;
   transition: all 0.25s ease;
-}
+} */
 
-#navbarmain .nav-link:hover {
+/* #navbarmain .nav-link:hover {
   color: #4c952d;
 
-  /* border-bottom: solid 2px green; */
-}
 
-.dropdown-toggle::after {
+} */
+
+/* .dropdown-toggle::after {
   display: none;
-}
+} */
 
 .navbar-brand {
   margin-top: 10px;
 }
 
-.dropdown .dropdown-menu {
+/* .dropdown .dropdown-menu {
   position: absolute;
   display: block;
   background: #fff;
@@ -473,9 +473,8 @@ a:focus {
 .dropdown .dropdown-item:hover {
   color: #fff;
   background-color: #4c952d;
-}
-/* new add animations  */
-/* Add animation for the navbar when toggled */
+} */
+
 #navbarmain.navbar-collapse {
   transition: all 0.3s ease;
 }
@@ -485,7 +484,7 @@ a:focus {
   animation: slideIn 0.3s ease;
 }
 
-/* Add animation for the hamburger icon */
+
 .navbar-toggler-icon {
   transition: transform 0.3s ease;
 }
@@ -1369,7 +1368,13 @@ a:focus {
   color: #223a66;
   font-size: 13px;
 }
-
+.logo-header {
+  color: #223a66;
+  font-size: x-large;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
 .comment-wrap .media .comment-meta {
   font-size: 12px;
   color: #888;
@@ -1617,7 +1622,7 @@ a:focus {
 /*  */
 
 .main-search nav {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
 }

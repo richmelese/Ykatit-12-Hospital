@@ -11,7 +11,6 @@
     <meta name="author" content="themefisher.com" />
 
     <title>Yekatit-12 Hospital</title>
-    
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/images/log.png" />
@@ -26,15 +25,20 @@
       rel="stylesheet"
       href="plugins/slick-carousel/slick/slick-theme.css"
     />
-
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
     <!-- Add these lines to include Swiper.js -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+
     <style></style>
   </head>
   <style></style>
@@ -77,159 +81,304 @@
             header.classList.toggle("sticky", window.scrollY > 0);
           });
         </script>
-        <nav class="navbar navbar-expand-lg navigation" id="navbar">
+        <header id="nav-menu" aria-label="navigation bar">
           <div class="container">
-            <a class="navbar-brand" href="index.html">
-              <img
-                id="logo-img"
-                src="images/assets/log.jpg"
-                alt=""
-                class="img-fluid"
-              />
-            </a>
-            <div id="mtitle">
-              Yekatit-12 Hospital <br /><span class="Medical-spam"
-                >Medical College</span
-              >
+            <div class="nav-start">
+              <a class="logo" href="/">
+                <img
+                  src="./asset/assets/images/log.jpg"
+                  width="35"
+                  height="35"
+                  alt="Inc Logo"
+                />
+              </a>
+              <p class="logo-header">
+                Yekatit-12 Hospital <br />Medical College
+              </p>
+              <nav class="menu">
+                <ul class="menu-bar">
+                  <li><a class="nav-link" href="index.html">Home</a></li>
+                  <li><a class="nav-link" href="About.html">About</a></li>
+
+                  <li>
+                    <button
+                      class="nav-link dropdown-btn"
+                      data-dropdown="dropdown1"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      aria-label="browse"
+                    >
+                      Services
+                      <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="dropdown1" class="dropdown">
+                      <ul role="menu">
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#best-of-the-day">
+                            <img
+                              src="./asset/assets/icons/primarycare.jpg"
+                              class="icon"
+                            />
+                            <div>
+                              <span class="dropdown-link-title"
+                                >Primary Care</span
+                              >
+                            </div>
+                          </a>
+                        </li>
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#featured-streams">
+                            <img
+                              src="./asset/assets/icons/emergncy.png"
+                              class="icon"
+                            />
+                            <div>
+                              <div class="emergency-icon">
+                                <div class="cross"></div>
+                              </div>
+                              <span class="dropdown-link-title"
+                                >Emergency Care</span
+                              >
+                              <!-- <p>Leading creatives livestreams</p> -->
+                            </div>
+                          </a>
+                        </li>
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#subscriptions">
+                            <img
+                              src="./asset/assets/icons/download.jpg"
+                              class="icon"
+                            />
+                            <div>
+                              <span class="dropdown-link-title"
+                                >Heart and Vasula</span
+                              >
+                              <!-- <p>Gain exclusive access</p> -->
+                            </div>
+                          </a>
+                        </li>
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#creative-feed">
+                            <img
+                              src="./asset/assets/icons/pediatric.png"
+                              class="icon"
+                            />
+                            <div>
+                              <span class="dropdown-link-title"
+                                >Pediatrics</span
+                              >
+                              <!-- <p>Pediatrics</p> -->
+                            </div>
+                          </a>
+                        </li>
+
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#creative-feed">
+                            <img
+                              src="./asset/assets/icons/theeth.jpg"
+                              class="icon"
+                            />
+                            <div>
+                              <span class="dropdown-link-title"
+                                >Orthopedics</span
+                              >
+                              <!-- <p>Pediatrics</p> -->
+                            </div>
+                          </a>
+                        </li>
+                        '
+                      </ul>
+
+                      <ul role="menu">
+                        <!-- <li class="dropdown-title">
+                          <span class="dropdown-link-title">Orthopedics</span>
+                        </li> -->
+
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#creative-feed">
+                            <img
+                              src="./asset/assets/icons/neuro.png"
+                              class="icon"
+                            />
+                            Neurosciences
+                          </a>
+                        </li>
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#after-effect">
+                            <img
+                              src="./asset/assets/icons/imagini.png"
+                              class="icon"
+                            />
+                            Imaging
+                          </a>
+                        </li>
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#sketch">
+                            <img
+                              src="./asset/assets/icons/lab.jpg"
+                              class="icon"
+                            />
+                            Laboratory
+                          </a>
+                        </li>
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#indesign">
+                            <img
+                              src="./asset/assets/icons/dental.png"
+                              class="icon"
+                            />
+                            Dental Care
+                          </a>
+                        </li>
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#figma">
+                            <img
+                              src="./asset/assets/icons/more.png"
+                              class="icon"
+                            />
+                            <b> More Sevices </b>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      class="nav-link dropdown-btn"
+                      data-dropdown="dropdown2"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      aria-label="discover"
+                    >
+                      Department
+                      <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="dropdown2" class="dropdown">
+                      <ul role="menu">
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#figma">
+                            <img
+                              src="./asset/assets/icons/public.jpg"
+                              class="icon"
+                            />
+                            <b> Public health </b>
+                          </a>
+                        </li>
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#figma">
+                            <img
+                              src="./asset/assets/icons/fa.jpg"
+                              class="icon"
+                            />
+                            <b>Facality</b>
+                          </a>
+                        </li>
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#figma">
+                            <img
+                              src="./asset/assets/icons/it.png"
+                              class="icon"
+                            />
+                            <b>Information technology (IT)</b>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul role="menu">
+                        <!-- <li>
+                          <span class="dropdown-link-title">Download App</span>
+                        </li> -->
+                        <!-- <li class="droplinks"  role="menuitem">
+                          <a class="dropdown-link" href="#mac-windows"
+                            >MacOS & Windows</a
+                          >
+                        </li> -->
+                        <!-- <li class="droplinks"  role="menuitem">
+                          <a class="dropdown-link" href="#linux">Linux</a>
+                        </li> -->
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li>
+                    <button
+                      class="nav-link dropdown-btn"
+                      data-dropdown="dropdown3"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      aria-label="education"
+                    >
+                      Education
+                      <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="dropdown3" class="dropdown">
+                      <!-- Unique ID for Education dropdown -->
+                      <ul role="menu">
+                        <!-- Add your education options here -->
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#best-of-the-day">
+                            <img
+                              src="./asset/assets/icons/primarycare.jpg"
+                              class="icon"
+                            />
+                            <div>
+                              <span class="dropdown-link-title">SIS</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#featured-streams">
+                            <img
+                              src="./asset/assets/icons/lms.png"
+                              class="icon"
+                            />
+                            <div>
+                              <span class="dropdown-link-title">LMS</span>
+                              <!-- <p>Description of Option 2</p> -->
+                            </div>
+                          </a>
+                        </li>
+                        <li class="droplinks" role="menuitem">
+                          <a class="dropdown-link" href="#featured-streams">
+                            <img
+                              src="./asset/assets/icons/dvt.jpg"
+                              class="icon"
+                            />
+                            <div>
+                              <span class="dropdown-link-title"
+                                >Eductional Dev't Center</span
+                              >
+                              <!-- <p>Description of Option 2</p> -->
+                            </div>
+                          </a>
+                        </li>
+                        <!-- Add more education options if needed -->
+                      </ul>
+                    </div>
+                  </li>
+
+                  <button
+                    id="contact-btn"
+                    class="btn btn-main-2 btn-icon btn-round-full"
+                  >
+                    Contact Us
+                  </button>
+                </ul>
+              </nav>
             </div>
+            <div class="nav-end">
+              <div class="right-container"></div>
 
-            <button
-              class="navbar-toggler collapsed"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarmain"
-              aria-controls="navbarmain"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="icofont-navigation-menu"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarmain">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="services.html"
-                    id="dropdown02"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Services <i class="icofont-thin-down"></i
-                  ></a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdown02">
-                    <li>
-                      <a class="dropdown-item" href="services.html"
-                        >Primary Care</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="services.html"
-                        >Emergency Care</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="services.html"
-                        >Heart and Vasular</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="services.html">Cancer</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="services.html"
-                        >Pediatrics</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="services.html"
-                        >Orthopedics</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="services.html"
-                        >Neurosciences</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="services.html">Imaging</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="moreservices.html"
-                        ><b>More service</b></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="department.html"
-                    id="dropdown02"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Department <i class="icofont-thin-down"></i
-                  ></a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdown02">
-                    <li>
-                      <a class="dropdown-item" href="department.html"
-                        >Public Health</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="department-single.html"
-                        >Faculty</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="department-single.html"
-                        >Information Technology (IT)</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="doctor.html"
-                    id="dropdown03"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Education <i class="icofont-thin-down"></i
-                  ></a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                    <li>
-                      <a class="dropdown-item" href="http://y12hmc.edu.et/"> SIS</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="lms.html">LMS </a>
-                    </li>
-
-                    <li>
-                      <a class="dropdown-item" href="appoinment.html"
-                        >Educational Dev't center</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-              </ul>
+              <button
+                id="hamburger"
+                aria-label="hamburger"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="bx bx-menu" aria-hidden="true"></i>
+              </button>
             </div>
           </div>
-        </nav>
+        </header>
       </header>
 
       <div class="swiper-container">
@@ -285,10 +434,12 @@
                     Your next trusted health partner
                   </h1>
                   <p id="sub-content" class="mb-4 pr-5">
-                    Our doctors boast impressive educational backgrounds from renowned medical institutions.
-                    They hold prestigious certifications, fellowships, and memberships in esteemed medical associations.
-                    With years of rigorous training and specialization,they possess comprehensive knowledge 
-                    and stay updated with the latest advancements in medical science!
+                    Our doctors boast impressive educational backgrounds from
+                    renowned medical institutions. They hold prestigious
+                    certifications, fellowships, and memberships in esteemed
+                    medical associations. With years of rigorous training and
+                    specialization,they possess comprehensive knowledge and stay
+                    updated with the latest advancements in medical science!
                   </p>
                   <div class="btn-container">
                     <a
@@ -321,10 +472,11 @@
                     Top Notch Laboratory Services
                   </h1>
                   <p id="sub-content" class="mb-4 pr-5">
-                    Our Laboratory Services is advanced by providing medical testing 
-                    to diagnose and manage health-related problems and diseases.
-                    Our team of pathologists and registered clinical laboratory scientists 
-                    perform various tests to provide accurate results about your health!
+                    Our Laboratory Services is advanced by providing medical
+                    testing to diagnose and manage health-related problems and
+                    diseases. Our team of pathologists and registered clinical
+                    laboratory scientists perform various tests to provide
+                    accurate results about your health!
                   </p>
                   <div class="btn-container">
                     <a
@@ -356,9 +508,9 @@
                     Digital marketing in healthcare
                   </h1>
                   <p id="sub-content" class="mb-4 pr-5">
-                    Our hospital is among the first hospital in Ethiopia to adopt 
-                    Electronic Health Record (EHR) system and introduced paperless
-                    to other medical hospitals in the country!
+                    Our hospital is among the first hospital in Ethiopia to
+                    adopt Electronic Health Record (EHR) system and introduced
+                    paperless to other medical hospitals in the country!
                   </p>
                   <div class="btn-container">
                     <a
@@ -388,7 +540,7 @@
                   >
                   <h1 id="Header" class="mb-3 mt-3">Cardiology</h1>
                   <p id="sub-content" class="mb-4 pr-5">
-                    We have several physicians who subspecialize in providing 
+                    We have several physicians who subspecialize in providing
                     cardiovascular care for adults and pediatric patients!
                   </p>
                   <div class="btn-container">
@@ -412,7 +564,8 @@
 
       <!-- Add Swiper JS -->
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+      <script src="script.js"></script>
+      <script></script>
       <!-- Initialize Swiper -->
       <script>
         var swiper = new Swiper(".swiper-container", {
@@ -844,7 +997,12 @@
           <div class="row clients-logo">
             <div class="col-lg-2">
               <div class="client-thumb">
-                <img src="images/about/1.png" alt="" class="img-fluid" />
+                <img
+                  id="logo-img"
+                  src="images/about/1.png"
+                  alt=""
+                  class="img-fluid"
+                />
               </div>
             </div>
             <div class="col-lg-2">
