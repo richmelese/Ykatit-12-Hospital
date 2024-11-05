@@ -78,9 +78,9 @@ p {
   line-height: 30px;
 }
 
-.navbar-toggle .icon-bar {
+/* .navbar-toggle .icon-bar {
   background: #223a66;
-}
+} */
 
 input[type="email"],
 input[type="password"],
@@ -479,7 +479,7 @@ a:focus {
   transition: all 0.3s ease;
 }
 
-/* Apply styles when the navbar is open */
+
 #navbarmain.navbar-collapse.show {
   animation: slideIn 0.3s ease;
 }
@@ -493,7 +493,7 @@ a:focus {
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transform: rotate(
     180deg
-  ); /* You can adjust the rotation or other properties */
+  ); 
 }
 
 /* Define the animation keyframes */
@@ -532,7 +532,7 @@ a:focus {
 .header-top-bar {
   background-color: #214213;
   padding: 10px 0;
-  transition: background-color 0.3s ease; /* Optional: add a smooth transition effect */
+  transition: background-color 0.3s ease; 
 }
 
 .header-top-bar.sticky {

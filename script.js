@@ -1,36 +1,56 @@
-// script.js
-const dropdownBtn = document.querySelectorAll(".dropdown-btn");
-const dropdown = document.querySelectorAll(".dropdown");
+const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+const dropdowns = document.querySelectorAll(".dropdown");
 const hamburgerBtn = document.getElementById("hamburger");
 const navMenu = document.querySelector(".menu");
-const links = document.querySelectorAll(".dropdown a");
 
 function setAriaExpandedFalse() {
-  dropdownBtn.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
+  dropdownBtns.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
 }
 
-function closeDropdownMenu() {
-  dropdown.forEach((drop) => {
+function closeAllDropdowns() {
+  dropdowns.forEach((drop) => {
     drop.classList.remove("active");
-    drop.addEventListener("click", (e) => e.stopPropagation());
   });
+
+  setAriaExpandedFalse();
 }
 
 function toggleHamburger() {
-  navMenu.classList.toggle("show");
+  if (navMenu.classList.contains("show")) {
+    closeNavigation();
+  } else {
+    openNavigation();
+  }
 }
 
-dropdownBtn.forEach((btn) => {
+function openNavigation() {
+  navMenu.classList.add("show");
+  hamburgerBtn.querySelector("i").classList.remove("bx-menu");
+  hamburgerBtn.querySelector("i").classList.add("bx-x");
+}
+
+function closeNavigation() {
+  navMenu.classList.remove("show");
+  hamburgerBtn.querySelector("i").classList.remove("bx-x");
+  hamburgerBtn.querySelector("i").classList.add("bx-menu");
+  closeAllDropdowns();
+}
+
+hamburgerBtn.addEventListener("click", toggleHamburger);
+
+dropdownBtns.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     const dropdownIndex = e.currentTarget.dataset.dropdown;
     const dropdownElement = document.getElementById(dropdownIndex);
 
     dropdownElement.classList.toggle("active");
-    dropdown.forEach((drop) => {
-      if (drop.id !== btn.dataset["dropdown"]) {
+
+    dropdowns.forEach((drop) => {
+      if (drop.id !== dropdownIndex) {
         drop.classList.remove("active");
       }
     });
+
     e.stopPropagation();
     btn.setAttribute(
       "aria-expanded",
@@ -39,48 +59,23 @@ dropdownBtn.forEach((btn) => {
   });
 });
 
-// close dropdown menu when the dropdown links are clicked
-links.forEach((link) =>
-  link.addEventListener("click", () => {
-    closeDropdownMenu();
-    setAriaExpandedFalse();
-    toggleHamburger();
-  })
-);
+document.documentElement.addEventListener("click", closeAllDropdowns);
 
-// close dropdown menu when you click on the document body
-document.documentElement.addEventListener("click", () => {
-  closeDropdownMenu();
-  setAriaExpandedFalse();
-});
-
-// close dropdown when the escape key is pressed
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    closeDropdownMenu();
-    setAriaExpandedFalse();
+    closeAllDropdowns();
   }
 });
 
-hamburgerBtn.addEventListener("click", toggleHamburger);
-// Hover effecr
-const dropdownBtns = document.querySelectorAll(".dropdown-btn");
-const dropdowns = document.querySelectorAll(".dropdown");
-
-function closeAllDropdowns() {
-  dropdowns.forEach((drop) => {
-    drop.classList.remove("active");
+const dropdownLinks = document.querySelectorAll(".dropdown a");
+dropdownLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    closeAllDropdowns();
+    toggleHamburger();
   });
+});
 
-  dropdownBtns.forEach((btn) => {
-    btn.setAttribute("aria-expanded", "false");
-  });
-}
-
-function isDesktop() {
-  return window.innerWidth >= 601; // Adjust the threshold based on your design
-}
-
+// Hover effect
 dropdownBtns.forEach((btn) => {
   btn.addEventListener("mouseover", function () {
     if (isDesktop()) {
@@ -104,30 +99,11 @@ dropdownBtns.forEach((btn) => {
       });
     }
   });
-
-  btn.addEventListener("click", function (e) {
-    if (isDesktop()) {
-      e.preventDefault();
-      const dropdownIndex = btn.dataset.dropdown;
-      const dropdownElement = document.getElementById(dropdownIndex);
-
-      dropdownElement.classList.toggle("active");
-
-      dropdowns.forEach((drop) => {
-        if (drop.id !== dropdownIndex) {
-          drop.classList.remove("active");
-        }
-      });
-    }
-  });
 });
 
-document.documentElement.addEventListener("click", () => {
-  closeAllDropdowns();
-});
+function isDesktop() {
+  return window.innerWidth >= 601; // Adjust the threshold based on your design
+}
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeAllDropdowns();
-  }
-});
+
+   
